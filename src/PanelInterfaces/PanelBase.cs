@@ -2,7 +2,7 @@ using UnityEngine;
 using BeatThat.UI;
 using BeatThat.Anim;
 
-namespace BeatThat.UI.Comp
+namespace BeatThat
 {
 	public abstract class PanelBase : MonoBehaviour, Panel
 	{

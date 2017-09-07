@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using BeatThat.Anim;
 
-namespace BeatThat.UI
+namespace BeatThat
 {
 	/// <summary>
 	/// Delegate callback used to script some incremental behavior on every frame/update of a transition.

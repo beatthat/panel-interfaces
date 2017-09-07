@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace BeatThat.UI
+namespace BeatThat
 {
 	public class PanelTransitionEqualityComparer : IEqualityComparer<PanelTransition>
 	{

@@ -1,6 +1,6 @@
 {
   "name": "unity-panel-interfaces",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Panels are blocks of (UI) content that can be transitioned in and out. Panel-interfaces package contains just the core interfaces so that other packages can interact with panels without depending on implementation code.",
   "main": "index.js",
   "repository": {
