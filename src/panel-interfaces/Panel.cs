@@ -10,7 +10,7 @@ namespace BeatThat
 	public delegate void OnTransitionFrameDelegate(float transitionTime, float frameTime);
 
 	/// <summary>
-	/// A panel (generally of ui elements) that can be transitioned in and out as a unit.
+	/// A <c>Panel</c> (generally of ui elements) that can be transitioned in and out as a unit.
 	/// </summary>
 	public interface Panel
 	{

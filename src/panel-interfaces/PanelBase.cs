@@ -1,5 +1,4 @@
 using UnityEngine;
-using BeatThat.UI;
 using BeatThat.Anim;
 
 namespace BeatThat
