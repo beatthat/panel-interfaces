@@ -1,34 +1,35 @@
 {
-  "name": "panel-interfaces",
-  "scope": "ape",
-  "version": "0.0.4",
-  "description": "Panels are blocks of (UI) content that can be transitioned in and out. Panel-interfaces package contains just the core interfaces so that other packages can interact with panels without depending on implementation code.",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/beatthat/panel-interfaces.git"
-  },
-  "files": [
-    "index.js",
-    "scripts",
-    "src"
-  ],
-  "author": "larrykirschner@gmail.com",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/beatthat/panel-interfaces/issues"
-  },
-  "homepage": "https://github.com/beatthat/panel-interfaces",
-  "scripts": {
-    "postinstall": "node scripts/postinstall.js",
-    "install:test": "rm -f *.tgz && npm pack && cd test && npm run clean && npm install",
-    "clean": "rm -f *.tgz && cd test && npm run clean",
-    "sync:test2src": "rsync -rv --include '*/' --include '*.cs' --exclude '*' --prune-empty-dirs test/Assets/Plugins/${npm_package_scope}/${npm_package_name}/ ./src/${npm_package_name}/",
-    "pub:tag": "git add -A && git commit -m ${npm_package_version} && git tag -a ${npm_package_version} -m ${npm_package_version} && git push origin master && git push origin ${npm_package_version}"
-  },
-  "dependencies": {
-    "mkdirp": "^0.5.1",
-    "ncp": "^2.0.0",
-    "transition-interfaces": "github:beatthat/transition-interfaces#semver:^0.0.3"
-  }
+    "name": "panel-interfaces",
+    "scope": "ape",
+    "version": "0.0.5",
+    "description": "Panels are blocks of (UI) content that can be transitioned in and out. Panel-interfaces package contains just the core interfaces so that other packages can interact with panels without depending on implementation code.",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/beatthat/panel-interfaces.git"
+    },
+    "files": [
+        "index.js",
+        "scripts",
+        "src"
+    ],
+    "author": "larrykirschner@gmail.com",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/beatthat/panel-interfaces/issues"
+    },
+    "homepage": "https://github.com/beatthat/panel-interfaces",
+    "scripts": {
+        "postinstall": "node scripts/postinstall.js",
+        "install:test": "rm -f *.tgz && npm pack && cd test && npm run clean && npm install",
+        "clean": "rm -f *.tgz && cd test && npm run clean",
+        "cp:test2src": "cd test && node scripts/cp-test2src.js",
+        "overwrite:test2src": "cd test && node scripts/overwrite-test2src.js",
+        "pub:tag": "git add -A && git commit -m ${npm_package_version} && git tag -a ${npm_package_version} -m ${npm_package_version} && git push origin master && git push origin ${npm_package_version}"
+    },
+    "dependencies": {
+        "path": "^0.12.7",
+        "unity-npm-utils": "github:beatthat/unity-npm-utils#semver:^0.0.9",
+        "transition-interfaces": "github:beatthat/transition-interfaces#semver:^0.0.3"
+    }
 }
