@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 
 namespace BeatThat
@@ -30,6 +31,19 @@ namespace BeatThat
 
 			if(opt != PropertyEventOptions.Disable) {
 				changeEvent();
+			}
+		}
+
+		public static void Set<T>(this PropertyEventOptions opt, ref T prop, T val, UnityEvent changeEvent)
+		{
+			if(EqualityComparer<T>.Default.Equals(prop, val) && opt != PropertyEventOptions.Force) {
+				return;
+			}
+
+			prop = val;
+
+			if(opt != PropertyEventOptions.Disable) {
+				changeEvent.Invoke ();
 			}
 		}
 	}
