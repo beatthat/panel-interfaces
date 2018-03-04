@@ -1,5 +1,5 @@
 {
-  "name": "property-interfaces",
+  "name": "panel-interfaces",
   "scope": "ape",
   "version": "2.0.0",
   "description": "Panels are blocks of (UI) content that can be transitioned in and out. Panel-interfaces package contains just the core interfaces so that other packages can interact with panels without depending on implementation code.",
